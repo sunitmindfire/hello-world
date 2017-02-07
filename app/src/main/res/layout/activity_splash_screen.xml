@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_splash_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.sunitdeswal.spycam.activities.SplashScreenActivity">
+
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        style= "@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:id="@+id/progress_bar"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/spy_man_image"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/spy_cam_text_image"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/spyman" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/spy_cam_text_image"
+        android:layout_above="@id/progress_bar"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/spycam_text"/>
+
+</RelativeLayout>

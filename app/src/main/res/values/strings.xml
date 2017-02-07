@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SpyCam</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+    <string name="directory_file_name">SpyCamVideo</string>
+    <string name="notification_tittle">Background Video Recorder</string>
+    <string name="notification_text">Recording start</string>
+</resources>
