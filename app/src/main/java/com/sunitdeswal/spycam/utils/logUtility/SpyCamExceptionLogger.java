@@ -1,4 +1,4 @@
-package com.sunitdeswal.spycam.utility.logUtility;
+package com.sunitdeswal.spycam.utils.logUtility;
 
 /**
  * Created by Sunit deswal on 1/23/2017.

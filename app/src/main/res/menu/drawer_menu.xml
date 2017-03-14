@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/home"
-        android:icon="@mipmap/spycam_app_icon"
+        android:icon="@drawable/home"
         android:title="Home" />
 
     <item
@@ -13,6 +13,12 @@
 
     <item
         android:id="@+id/setting"
-        android:title="Setting" />
+        android:title="Setting"
+        android:icon="@drawable/setting"/>
+
+    <item
+        android:id="@+id/help"
+        android:title="Help"
+        android:icon="@drawable/help"/>
 
 </menu>

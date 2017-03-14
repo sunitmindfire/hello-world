@@ -1,11 +1,9 @@
-package com.sunitdeswal.spycam.utility.logUtility;
+package com.sunitdeswal.spycam.utils.logUtility;
 
 /**
  * Created by Sunit deswal on 1/23/2017.
  */
 
-import android.os.Debug;
-import android.support.compat.BuildConfig;
 import android.util.Log;
 
 
@@ -18,7 +16,7 @@ import android.util.Log;
 
 public class MyLog {
 
-    private static boolean isDebug = BuildConfig.DEBUG;
+    private static boolean isDebug = true;
     /**
      * Following are the methods for logging based upon a boolean that decides
      * for DEBUG/RELEASE mode
