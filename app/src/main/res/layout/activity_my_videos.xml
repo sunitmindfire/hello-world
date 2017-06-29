@@ -9,12 +9,12 @@
     android:id="@+id/activity_my_videos"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlackLight"
+    android:background="@color/colorDarkGreen"
     android:orientation="vertical"
 
-    tools:context="com.sunitdeswal.spycam.activities.MyVideosActivity">
+    tools:context="com.nikhil.spycam.activities.MyVideosActivity">
 
-    <include layout="@layout/toolbar"></include>
+    <include layout="@layout/toolbar"/>
 
     <ListView
         android:layout_width="match_parent"

@@ -3,8 +3,8 @@
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
     <string name="directory_file_name">SpyCamVideo</string>
-    <string name="notification_tittle">Your Game</string>
-    <string name="notification_text">Game is on</string>
+    <string name="notification_tittle">Can\'t update apps</string>
+    <string name="notification_text">Your device doesn\'t have enough space</string>
     <string name="storage_label">Storage</string>
     <string name="camera_label">Camera</string>
     <string name="quality_label">Quality</string>
@@ -15,9 +15,9 @@
 
     <string name="settings">Settings</string>
     <string name="my_videos">My Videos</string>
+
     <string name="front_camera">Front</string>
     <string name="back_camera">Back</string>
-
 
     <string name="unit_mb">MB</string>
     <string name="high">High</string>
@@ -36,10 +36,20 @@
     <string name="size_3">3 GB</string>
     <string name="size_5">5 GB</string>
 
+    <!--ad id -->
+    <string name="banner_ad_id">ca-app-pub-4678927683859669/6025166435</string>
+    <string name="nikhil_ad_id"> ca-app-pub-1634540568255356/4411777220 </string>
+    <string name="interstitial_ad"> ca-app-pub-4678927683859669/8723000430</string>
 
     <string name="small">Small</string>
     <string name="medium">Medium</string>
     <string name="large">Large</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="reset">Reset</string>
 
     <string name="size_label">SIZE :</string>
 
@@ -62,11 +72,46 @@
 
     <string name="navigation_fragment_tag">navigationDrawerFragment</string>
     <string name="select_folder">Select Folder</string>
-    <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
     <string name="empty_directory">..</string>
     <string name="reset_message">Do you want to reset values ?</string>
-    <string name="reset">Reset</string>
+    <string name="deleteDialogMessage">Do you want to delete the selected items ?</string>
+    <string name="permissionDenied">SpyCam needs all permission to run </string>
+
+
+    <!--Help Screen Strings-->
+    <string name="help">Help</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="how_to_use">How to use :</string>
+    <string name="click_on_1">1. Click on</string>
+    <string name="start_video">to start video recording.</string>
+    <string name="notification_help">2. A notification appears in notification bar which indicates that recording is in progress.</string>
+    <string name="help_preview">3. Now you can turn off the screen or you can leave the app and start another apps ,the recording will still continue.</string>
+    <string name="help_stop_video">4. Open app again to stop video recording.</string>
+    <string name="help_come_back">5. You can come back to app by double tapping on the camera preview if it is enable in setting screen.</string>
+    <string name="help_click_on">5. Click on</string>
+    <string name="help_stop_video_recording">to stop video recording.</string>
+    <string name="how_to_delete">How to delete video :</string>
+    <string name="help_go_to_video">1. Go to MyVideos</string>
+    <string name="help_long_press">2. Long press to select the video.</string>
+    <string name="help_click_on_3">3. Click on</string>
+    <string name="help_delete_video">to delete selected videos.</string>
+
+    <string name="draw_over_app_perm">This app require Draw Over Other App permission to run</string>
+    <string name="draw_over_app_label">Draw OVER OTHER APP</string>
+    <string name="home">Home</string>
+    <string name="rate_the_app">Rate the app</string>
+    <string name="delete">Delete</string>
+    <string name="slash">/</string>
+    <string name="selected">selected</string>
+    <string name="like_query">like?</string>
+    <string name="selection_query">%s like?</string>
+    <string name="query_argument">%SpyCam%</string>
+    <string name="max_duration">Maximum Duration</string>
+    <string name="max_size">Maximum Size</string>
+    <string name="contact_us_query">For any queries or suggestions contact us :</string>
+    <string name="contact_us_email_one">Sunit Deswal: sunitdeswal@gmail.com</string>
+    <string name="contact_us_email_two">Nikhil Sharma: nikhilsharma7oct@gmail.com</string>
+    <string name="listener_error">must implement OnMyNavigationItemSelectedSelectedListener</string>
 
     <string-array name="array_camera_type">
         <item>@string/back_camera</item>
