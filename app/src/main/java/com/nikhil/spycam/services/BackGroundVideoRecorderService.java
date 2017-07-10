@@ -8,8 +8,11 @@ import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
+import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,6 +22,7 @@ import android.widget.Toast;
 import com.nikhil.spycam.CameraPreview;
 import com.nikhil.spycam.R;
 import com.nikhil.spycam.constants.SpyCamConstants;
+import com.nikhil.spycam.enums.ServiceType;
 import com.nikhil.spycam.utils.CameraUtility;
 import com.nikhil.spycam.utils.NotificationUtility;
 import com.nikhil.spycam.utils.SpyCamUtility;
@@ -42,6 +46,7 @@ public class BackGroundVideoRecorderService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+
 
         SpyCamPreferenceUtility preferenceUtility = new SpyCamPreferenceUtility(this);
 
@@ -70,6 +75,22 @@ public class BackGroundVideoRecorderService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         MyLog.e("tag camera", "onStartCommand" + Thread.currentThread().getName());
+        Bundle bundle = intent.getBundleExtra(SpyCamConstants.KEY_RECORDER_SERVICE);
+        if((ServiceType)bundle.getSerializable(SpyCamConstants.KEY_SERVICE_TYPE) == ServiceType.ALARM){
+            int duration = bundle.getInt(SpyCamConstants.KEY_DURATION,2);
+            new CountDownTimer(duration*60*1000,1000){
+
+                @Override
+                public void onTick(long millisUntilFinished) {
+
+                }
+
+                @Override
+                public void onFinish() {
+                    stopSelf();
+                }
+            }.start();
+        }
 
         int camId = new SpyCamPreferenceUtility(this).getPreferredCamera();
         mCamera = (camId==0)

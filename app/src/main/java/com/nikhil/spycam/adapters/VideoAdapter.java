@@ -132,7 +132,6 @@ public class VideoAdapter extends CursorAdapter {
         notifyDataSetChanged();
     }
 
-
 }
 
 

@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <uses-feature android:name="android.hardware.camera" />
 
@@ -22,31 +23,41 @@
 
         <!-- ================ All activities in application ================ -->
 
-        <activity android:name="com.nikhil.spycam.activities.SplashScreenActivity">
+        <activity android:name=".activities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.nikhil.spycam.activities.HomeActivity" />
-        <activity android:name="com.nikhil.spycam.activities.SettingActivity" />
-        <activity android:name="com.nikhil.spycam.activities.MyVideosActivity" />
-        <activity android:name="com.nikhil.spycam.activities.DrawOverAppActivity" />
-        <activity android:name="com.nikhil.spycam.activities.ContactUsActivity" />
-        <activity android:name="com.nikhil.spycam.activities.HelpActivity" />
-
+        <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".activities.SettingActivity" />
+        <activity android:name=".activities.MyVideosActivity" />
+        <activity android:name=".activities.DrawOverAppActivity" />
+        <activity android:name=".activities.ContactUsActivity" />
+        <activity android:name=".activities.HelpActivity" />
+        <activity android:name=".activities.AlarmActivity"/>
+        <activity android:name=".activities.CreateAlarmActivity"/>
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
 
+        <!-- - ============= All Receivers in Application ============= -->
+        <receiver
+            android:name=".Receivers.BootCompletedReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
         <!-- ============= All Service in Application ============= -->
         <service
-            android:name="com.nikhil.spycam.services.BackGroundVideoRecorderService"
+            android:name=".services.BackGroundVideoRecorderService"
             android:exported="false" />
 
-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="d435aad73e9bce82e496583f18026e5d0d2be40a" />

@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:background="@color/colorWhite"
             android:orientation="vertical"
-            android:weightSum="10.5"
+            android:weightSum="12"
             tools:context="com.nikhil.spycam.activities.SettingActivity">
 
             <LinearLayout style="@style/setting_vertical_linear_grey_backgnd" />
@@ -123,6 +123,21 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/videoSizeSpinner"
                     style="@style/setting_end_view" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/setting_vertical_linear_grey_backgnd" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_alarm"
+                    android:textColor="@color/colorLightBlue"
+                    android:background="@color/colorWhite"
+                    android:onClick="launchAlarmScreen"/>
             </LinearLayout>
 
             <LinearLayout style="@style/setting_vertical_linear_grey_backgnd" />

@@ -112,6 +112,9 @@
     <string name="contact_us_email_one">Sunit Deswal: sunitdeswal@gmail.com</string>
     <string name="contact_us_email_two">Nikhil Sharma: nikhilsharma7oct@gmail.com</string>
     <string name="listener_error">must implement OnMyNavigationItemSelectedSelectedListener</string>
+    <string name="set_alarm">Set an Alarm</string>
+    <string name="alarm">Alarms</string>
+    <string name="duration_dialog_message">Recording Duration</string>
 
     <string-array name="array_camera_type">
         <item>@string/back_camera</item>

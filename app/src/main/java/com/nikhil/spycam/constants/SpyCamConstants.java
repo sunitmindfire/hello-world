@@ -16,6 +16,10 @@ public class SpyCamConstants {
     public final static String DATE_FORMAT = "yyyyMMdd_HHmmss";
     public  static String sStoragePath = Environment.getExternalStorageDirectory().getAbsolutePath() ;
 
+    public static String KEY_RECORDER_SERVICE = "RECORDING";
+    public static String KEY_SERVICE_TYPE = "SERVICE_TYPE";
+    public static String KEY_DURATION = "DURATION";
+
     public final static int NO_PREVIEW_WIDTH = 1;
     public final static int NO_PREVIEW_HEIGHT = 1;
 

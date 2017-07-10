@@ -24,8 +24,11 @@ import android.widget.Toast;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.nikhil.spycam.R;
+import com.nikhil.spycam.constants.SpyCamConstants;
+import com.nikhil.spycam.enums.ServiceType;
 import com.nikhil.spycam.fragments.NavigationDrawerFragment;
 import com.nikhil.spycam.services.BackGroundVideoRecorderService;
+import com.nikhil.spycam.utils.AlarmManagerUtility;
 import com.nikhil.spycam.utils.CameraUtility;
 import com.nikhil.spycam.utils.SpyCamUtility;
 import com.nikhil.spycam.utils.logUtility.MyLog;
@@ -118,17 +121,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                     //start a service to record video in background
                     if (CameraUtility.hasCamera(this)) {
                         Intent intent = new Intent(this, BackGroundVideoRecorderService.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable(SpyCamConstants.KEY_SERVICE_TYPE,ServiceType.NORMAL);
+                        intent.putExtra(SpyCamConstants.KEY_RECORDER_SERVICE,bundle);
                         startService(intent);
                         sIsRecordingStart = true;
-
-//                        Calendar cal = Calendar.getInstance();
-//                        cal.setTimeInMillis(System.currentTimeMillis());
-//                        cal.add(Calendar.SECOND, 10*60);
-//                        Intent ntent = new Intent(this, BackGroundVideoRecorderService.class);
-//                        PendingIntent pi = PendingIntent.getService(this, 0, intent, 0);
-//                        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-//                        alarmManager.set(AlarmManager.RTC, cal.getTimeInMillis(), pi);
-//                        Toast.makeText(this,"Alarms set",Toast.LENGTH_LONG).show();
                     }
                 }
                 break;

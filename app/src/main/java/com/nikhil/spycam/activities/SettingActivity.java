@@ -1,6 +1,7 @@
 package com.nikhil.spycam.activities;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -135,7 +136,6 @@ public class SettingActivity extends MyBaseActivity implements View.OnClickListe
         //initialize video size spinner
         mMaxSizeSpinner = (AppCompatSpinner) findViewById(R.id.videoSizeSpinner);
         setSpinnerArrayData(R.array.max_video_size, mMaxSizeSpinner);
-
     }
 
     /**
@@ -245,8 +245,6 @@ public class SettingActivity extends MyBaseActivity implements View.OnClickListe
         }
 
         return previewSize;
-
-
     }
 
     @Override
@@ -259,14 +257,13 @@ public class SettingActivity extends MyBaseActivity implements View.OnClickListe
 
         MyLog.e("switch", "" + isChecked);
 
-        if (!isChecked) {
-            setPreviewDimension(SpyCamConstants.NO_PREVIEW_WIDTH, SpyCamConstants.NO_PREVIEW_HEIGHT);
-            mPreviewSizeSpinner.setVisibility(View.INVISIBLE);
-        } else {
-            setPreviewDimension(SpyCamConstants.PREVIEW_WIDTH_SMALL, SpyCamConstants.PREVIEW_HEIGHT_SMALL);
-            mPreviewSizeSpinner.setSelection(0);
-            mPreviewSizeSpinner.setVisibility(View.VISIBLE);
-        }
+        if(isChecked)
+        mPreviewSizeSpinner.setSelection(0);
+
+        setPreviewDimension(isChecked ? SpyCamConstants.PREVIEW_WIDTH_SMALL : SpyCamConstants.NO_PREVIEW_WIDTH,
+                isChecked ? SpyCamConstants.PREVIEW_HEIGHT_SMALL : SpyCamConstants.NO_PREVIEW_HEIGHT);
+
+        mPreviewSizeSpinner.setVisibility(isChecked ? View.VISIBLE : View.INVISIBLE);
 
         mPreferenceUtility.setIsCameraPreviewEnabled(isChecked);
         MyLog.e("switch", "" + mPreferenceUtility.getIsCameraPreviewEnabled());
@@ -369,5 +366,14 @@ public class SettingActivity extends MyBaseActivity implements View.OnClickListe
     protected void onDestroy() {
         super.onDestroy();
         mAdView.destroy();
+    }
+
+    /**
+     * takes the user to alarm screen
+     * @param view : view which is clicked
+     */
+    public void launchAlarmScreen(View view) {
+        startActivity(new Intent(this,AlarmActivity.class));
+
     }
 }
